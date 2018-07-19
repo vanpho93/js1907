@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Word from './Word';
 export default class Words extends Component {
     state = {
         words: [
@@ -13,7 +13,7 @@ export default class Words extends Component {
     render() {
         return (
             <div>
-                WOrds
+                {this.state.words.map(word => <Word word={word} key={word._id} />)}
             </div>
         );
     }
